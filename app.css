@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #78789f;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    color: #091505;
+    font-size: larger;
+    height: 12vh;
+   
+ 
+}
+
+.logo{
+    flex: 1;
+}
+nav ul{
+    flex: 0.4;
+    
+    display: flex;
+    justify-content: space-evenly;
+}
+nav ul li{
+    list-style-type: none;
+}
+main{
+    padding: 3rem;
+    width: 100%;
+
+}
+.movie-holder{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+   
+}
+.movie-holder a{
+    flex: 1;
+    
+}
+#loader{
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    border: 10px solid #c1a7a7;
+}
+#loader::before{
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    height: calc(100% + 22px);
+    width: calc(100% + 22px);
+    top: -11px;
+    left: -11px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #0e0e13 transparent transparent transparent;
+    animation: rotate .6s linear infinite;
+}
+.movie-img-wrapper{
+    background-size: cover;
+    width: auto;
+    height: 310px;
+    border-radius: 10px;
+}
+#booker{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    
+}
+#booker-grid-holder{
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap: 15rem;
+    position: relative;
+    right: 7vw;
+    
+}
+.booking-grid{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: .5rem;
+    height: 250px;
+    width: 400px;
+    color:white;
+    background-color: rgb(180, 222, 222);
+    font-weight: 600;
+}
+#confirm-purchase{
+    display: grid;
+    place-items: center;
+    font-size: 1.2rem;
+  
+}
+#booking-grid-undefined{
+    font-size: auto;
+    
+}
+.seat{
+    display: grid;
+    place-content: center;
+    /* background-color: pink; */
+}
+.available-seat{
+    background-color: rgb(97, 106, 97);
+}
+.unavailable-seat{
+    background-color: rgb(208, 36, 36);
+}
+.select-seat{
+    border:4px outset rgb(0, 0, 0);
+}
+
+.d-none{
+    display: none;
+}
+.v-none{
+    visibility: hidden;
+    ;
+}
+input, button[type="submit"]{
+    width: 200px;
+    height: 35px;
+    padding: .5rem;
+}
+@keyframes rotate {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+#book-ticket-btn{
+    background-color: #605454;
+    color: white;
+    height: 40px;
+    width: 100px;
+}
